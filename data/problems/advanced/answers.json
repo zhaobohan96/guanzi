@@ -178,5 +178,76 @@
     "45":  {
                "answer":  null,
                "property":  "sente"
+           },
+    "46":  {
+               "property":  "gote",
+               "answer":  "10又1/3"
+           },
+    "47":  {
+               "property":  "gote",
+               "answer":  "9又1/2"
+           },
+    "48":  {
+               "property":  "gote",
+               "answer":  "6又1/3"
+           },
+    "49":  {
+               "property":  "gote",
+               "answer":  "7"
+           },
+    "50":  {
+               "property":  "gote",
+               "answer":  "11又5/6"
+           },
+    "51":  {
+               "property":  "gote",
+               "answer":  "9又1/6"
+           },
+    "52":  {
+               "property":  "gote",
+               "answer":  "11"
+           },
+    "53":  {
+               "property":  "gote",
+               "answer":  "18"
+           },
+    "54":  {
+               "property":  "gote",
+               "answer":  "18又11/12"
+           },
+    "55":  {
+               "property":  "gote",
+               "answer":  "14又5/6"
+           },
+    "56":  {
+               "property":  "gote",
+               "answer":  "9又2/3"
+           },
+    "57":  {
+               "turn":  "w",
+               "property":  "gote",
+               "answer":  "9"
+           },
+    "58":  {
+               "turn":  "w",
+               "property":  "sente",
+               "answer":  "7又2/3"
+           },
+    "59":  {
+               "property":  "gote",
+               "answer":  "5又2/3"
+           },
+    "60":  {
+               "turn":  "w",
+               "property":  "reverse",
+               "answer":  "2又1/12"
+           },
+    "61":  {
+               "property":  "gote",
+               "answer":  "5又7/12"
+           },
+    "62":  {
+               "property":  "gote",
+               "answer":  "8又3/4"
            }
 }
