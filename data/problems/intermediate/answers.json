@@ -1,0 +1,546 @@
+﻿{
+    "1":  {
+              "property":  "gote",
+              "answer":  "16"
+          },
+    "2":  {
+              "property":  "gote",
+              "answer":  "4又2/3"
+          },
+    "3":  {
+              "property":  "gote",
+              "answer":  "8"
+          },
+    "4":  {
+              "property":  "gote",
+              "answer":  "4又1/2"
+          },
+    "5":  {
+              "property":  "gote",
+              "answer":  "15又1/2"
+          },
+    "6":  {
+              "property":  "gote",
+              "answer":  "2又1/3"
+          },
+    "7":  {
+              "property":  "gote",
+              "answer":  "6"
+          },
+    "8":  {
+              "property":  "gote",
+              "answer":  "4"
+          },
+    "9":  {
+              "property":  "gote",
+              "answer":  "12"
+          },
+    "10":  {
+               "property":  "gote",
+               "answer":  "7又1/3"
+           },
+    "11":  {
+               "property":  "gote",
+               "answer":  "9"
+           },
+    "12":  {
+               "property":  "gote",
+               "answer":  "6"
+           },
+    "13":  {
+               "property":  "gote",
+               "answer":  "2又2/3"
+           },
+    "14":  {
+               "property":  "gote",
+               "answer":  "6又2/3"
+           },
+    "15":  {
+               "property":  "gote",
+               "answer":  "12又1/2"
+           },
+    "16":  {
+               "property":  "gote",
+               "answer":  "20"
+           },
+    "17":  {
+               "property":  "gote",
+               "answer":  "5又1/2"
+           },
+    "18":  {
+               "property":  "gote",
+               "answer":  "4又1/2"
+           },
+    "19":  {
+               "property":  "gote",
+               "answer":  "5又2/3"
+           },
+    "20":  {
+               "property":  "sente",
+               "answer":  "8又1/2"
+           },
+    "21":  {
+               "property":  "gote",
+               "answer":  "12"
+           },
+    "22":  {
+               "property":  "gote",
+               "answer":  "8"
+           },
+    "23":  {
+               "property":  "gote",
+               "answer":  "12又2/3"
+           },
+    "24":  {
+               "property":  "gote",
+               "answer":  "4又2/3"
+           },
+    "25":  {
+               "property":  "gote",
+               "answer":  "3又1/2"
+           },
+    "26":  {
+               "property":  "gote",
+               "answer":  "8又1/3"
+           },
+    "27":  {
+               "property":  "gote",
+               "answer":  "4又1/2"
+           },
+    "28":  {
+               "property":  "gote",
+               "answer":  "11"
+           },
+    "29":  {
+               "property":  "gote",
+               "answer":  "5"
+           },
+    "30":  {
+               "property":  "gote",
+               "answer":  "3又1/3"
+           },
+    "31":  {
+               "property":  "reverse",
+               "answer":  "5"
+           },
+    "32":  {
+               "property":  "gote",
+               "answer":  "9"
+           },
+    "33":  {
+               "property":  "gote",
+               "answer":  "9"
+           },
+    "34":  {
+               "property":  "reverse",
+               "answer":  "6又1/2"
+           },
+    "35":  {
+               "property":  "gote",
+               "answer":  "8"
+           },
+    "36":  {
+               "property":  "gote",
+               "answer":  "4又1/3"
+           },
+    "37":  {
+               "property":  "reverse",
+               "answer":  "4"
+           },
+    "38":  {
+               "property":  "gote",
+               "answer":  "10"
+           },
+    "39":  {
+               "property":  "gote",
+               "answer":  "4又2/3"
+           },
+    "40":  {
+               "property":  "gote",
+               "answer":  "8"
+           },
+    "41":  {
+               "property":  "gote",
+               "answer":  "11"
+           },
+    "42":  {
+               "property":  "reverse",
+               "answer":  "1又1/6"
+           },
+    "43":  {
+               "property":  "gote",
+               "answer":  "2又1/6"
+           },
+    "44":  {
+               "property":  "reverse",
+               "answer":  "3"
+           },
+    "45":  {
+               "property":  "sente",
+               "answer":  "3"
+           },
+    "46":  {
+               "property":  "sente",
+               "answer":  "1又2/3"
+           },
+    "47":  {
+               "property":  "gote",
+               "answer":  "2又1/3"
+           },
+    "48":  {
+               "property":  "gote",
+               "answer":  "5"
+           },
+    "49":  {
+               "property":  "gote",
+               "answer":  "10又1/3"
+           },
+    "50":  {
+               "property":  "gote",
+               "answer":  "9又1/2"
+           },
+    "51":  {
+               "property":  "gote",
+               "answer":  "6又1/3"
+           },
+    "52":  {
+               "property":  "gote",
+               "answer":  "7"
+           },
+    "53":  {
+               "property":  "gote",
+               "answer":  "11又5/6"
+           },
+    "54":  {
+               "property":  "gote",
+               "answer":  "9又1/6"
+           },
+    "55":  {
+               "property":  "gote",
+               "answer":  "11"
+           },
+    "56":  {
+               "property":  "gote",
+               "answer":  "18"
+           },
+    "57":  {
+               "property":  "gote",
+               "answer":  "18又11/12"
+           },
+    "58":  {
+               "property":  "gote",
+               "answer":  "14又5/6"
+           },
+    "59":  {
+               "property":  "gote",
+               "answer":  "9又2/3"
+           },
+    "60":  {
+               "turn":  "w",
+               "property":  "gote",
+               "answer":  "9"
+           },
+    "61":  {
+               "property":  "gote",
+               "answer":  "9"
+           },
+    "62":  {
+               "turn":  "w",
+               "property":  "reverse",
+               "answer":  "4"
+           },
+    "63":  {
+               "property":  "gote",
+               "answer":  "7又11/12"
+           },
+    "64":  {
+               "property":  "gote",
+               "answer":  "11又1/3"
+           },
+    "65":  {
+               "property":  "gote",
+               "answer":  "1又1/3"
+           },
+    "66":  {
+               "property":  "sente",
+               "answer":  "3"
+           },
+    "67":  {
+               "property":  "gote",
+               "answer":  "11"
+           },
+    "68":  {
+               "property":  "gote",
+               "answer":  "9"
+           },
+    "69":  {
+               "property":  "gote",
+               "answer":  "1又7/8"
+           },
+    "70":  {
+               "property":  "gote",
+               "answer":  "12又1/2"
+           },
+    "71":  {
+               "property":  "gote",
+               "answer":  "5又1/3"
+           },
+    "72":  {
+               "property":  "gote",
+               "answer":  "4又2/3"
+           },
+    "73":  {
+               "property":  "gote",
+               "answer":  "3又1/3"
+           },
+    "74":  {
+               "turn":  "w",
+               "property":  "gote",
+               "answer":  "26"
+           },
+    "75":  {
+               "turn":  "w",
+               "property":  "gote",
+               "answer":  "2又1/3"
+           },
+    "76":  {
+               "property":  "gote",
+               "answer":  "9"
+           },
+    "77":  {
+               "property":  "gote",
+               "answer":  "2又1/3"
+           },
+    "78":  {
+               "property":  "gote",
+               "answer":  "6又2/3"
+           },
+    "79":  {
+               "property":  "gote",
+               "answer":  "6又2/3"
+           },
+    "80":  {
+               "property":  "sente",
+               "answer":  "1又2/3"
+           },
+    "81":  {
+               "property":  "gote",
+               "answer":  "11又5/6"
+           },
+    "82":  {
+               "property":  "gote",
+               "answer":  "5"
+           },
+    "83":  {
+               "property":  "sente",
+               "answer":  "1又2/3"
+           },
+    "84":  {
+               "property":  "gote",
+               "answer":  "4"
+           },
+    "85":  {
+               "property":  "reverse",
+               "answer":  "2又1/3"
+           },
+    "86":  {
+               "property":  "gote",
+               "answer":  "4又2/3"
+           },
+    "87":  {
+               "property":  "gote",
+               "answer":  "10"
+           },
+    "88":  {
+               "property":  "gote",
+               "answer":  "20"
+           },
+    "89":  {
+               "property":  "gote",
+               "answer":  "7"
+           },
+    "90":  {
+               "property":  "gote",
+               "answer":  "4又1/6"
+           },
+    "91":  {
+               "property":  "gote",
+               "answer":  "10又1/2"
+           },
+    "92":  {
+               "property":  "gote",
+               "answer":  "8又2/3"
+           },
+    "93":  {
+               "property":  "gote",
+               "answer":  "9又1/2"
+           },
+    "94":  {
+               "property":  "gote",
+               "answer":  "4又5/6"
+           },
+    "95":  {
+               "property":  "gote",
+               "answer":  "11"
+           },
+    "96":  {
+               "property":  "gote",
+               "answer":  "13又5/6"
+           },
+    "97":  {
+               "property":  "gote",
+               "answer":  "14"
+           },
+    "98":  {
+               "property":  "gote",
+               "answer":  "4又1/6"
+           },
+    "99":  {
+               "property":  "gote",
+               "answer":  "9又1/3"
+           },
+    "100":  {
+                "property":  "gote",
+                "answer":  "7"
+            },
+    "101":  {
+                "property":  "reverse",
+                "answer":  "4"
+            },
+    "102":  {
+                "property":  "gote",
+                "answer":  "10又2/3"
+            },
+    "103":  {
+                "property":  "gote",
+                "answer":  "3又5/6"
+            },
+    "104":  {
+                "turn":  "w",
+                "property":  "sente",
+                "answer":  "7又2/3"
+            },
+    "105":  {
+                "property":  "gote",
+                "answer":  "7又1/3"
+            },
+    "106":  {
+                "property":  "gote",
+                "answer":  "9又1/2"
+            },
+    "107":  {
+                "property":  "reverse",
+                "answer":  "3又11/12"
+            },
+    "108":  {
+                "property":  "gote",
+                "answer":  "18又1/2"
+            },
+    "109":  {
+                "turn":  "w",
+                "property":  "gote",
+                "answer":  "4又1/3"
+            },
+    "110":  {
+                "property":  "reverse",
+                "answer":  "4又3/4"
+            },
+    "111":  {
+                "property":  "gote",
+                "answer":  "14"
+            },
+    "112":  {
+                "property":  "gote",
+                "answer":  "2又5/12"
+            },
+    "113":  {
+                "property":  "gote",
+                "answer":  "14又1/3"
+            },
+    "114":  {
+                "property":  "gote",
+                "answer":  "7又1/2"
+            },
+    "115":  {
+                "property":  "sente",
+                "answer":  "4又1/3"
+            },
+    "116":  {
+                "property":  "gote",
+                "answer":  "9又2/3"
+            },
+    "117":  {
+                "property":  "gote",
+                "answer":  "4又11/24"
+            },
+    "118":  {
+                "property":  "gote",
+                "answer":  "4又5/6"
+            },
+    "119":  {
+                "property":  "gote",
+                "answer":  "4又1/3"
+            },
+    "120":  {
+                "turn":  "w",
+                "property":  "gote",
+                "answer":  "11又1/5"
+            },
+    "121":  {
+                "property":  "reverse",
+                "answer":  "5"
+            },
+    "122":  {
+                "property":  "gote",
+                "answer":  "12"
+            },
+    "123":  {
+                "property":  "gote",
+                "answer":  "5又1/12"
+            },
+    "124":  {
+                "property":  "gote",
+                "answer":  "5又7/12"
+            },
+    "125":  {
+                "property":  "gote",
+                "answer":  "5又2/3"
+            },
+    "126":  {
+                "turn":  "w",
+                "property":  "reverse",
+                "answer":  "2又1/12"
+            },
+    "127":  {
+                "property":  "gote",
+                "answer":  "10又1/6"
+            },
+    "128":  {
+                "property":  "sente",
+                "answer":  "6又5/6"
+            },
+    "129":  {
+                "property":  "gote",
+                "answer":  "13"
+            },
+    "130":  {
+                "property":  "gote",
+                "answer":  "5又1/6"
+            },
+    "131":  {
+                "property":  "gote",
+                "answer":  "2又1/3"
+            },
+    "132":  {
+                "property":  "reverse",
+                "answer":  "2又1/2"
+            },
+    "133":  {
+                "property":  "gote",
+                "answer":  "5又7/12"
+            },
+    "134":  {
+                "property":  "gote",
+                "answer":  "8又3/4"
+            }
+}
