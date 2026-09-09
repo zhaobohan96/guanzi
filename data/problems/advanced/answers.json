@@ -1,8 +1,8 @@
 ﻿{
-    "1": {"answer":null,"property":"sente"},
-    "2": {"answer":null,"property":"sente"},
-    "3": {"answer":null,"property":"sente"},
-    "4": {"answer":null,"property":"sente"},
+    "1": {"answer":"3又1/6","property":"reverse"},
+    "2": {"answer":"10又17/24","property":"gote"},
+    "3": {"answer":"3又15/16","property":"gote"},
+    "4": {"answer":"11又5/8","property":"gote"},
     "5": {"answer":null,"property":"sente"},
     "6": {"answer":null,"property":"sente"},
     "7": {"answer":null,"property":"sente"},
