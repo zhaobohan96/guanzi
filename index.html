@@ -992,7 +992,7 @@
             }
         }
 
-        function loadProblem(index) {
+        async function loadProblem(index) {
             const senteRadio = document.querySelector('input[name="endgameProperty"][value="sente"]');
             if (senteRadio) senteRadio.checked = true;
 
@@ -1012,7 +1012,9 @@
                 infoTurn.textContent = prob.turn || '黑先';
                 answerValue = prob.answer;
                 answerProperty = prob.property;
-                loadSGF(prob.sgf);
+                boardElem.innerHTML = '<div class="loading">加载中...</div>';
+                const sgf = await loadSGFForProblem(prob);
+                if (sgf) loadSGF(sgf);
                 updateButtons();
                 updateProgress();
             } else {
@@ -1025,7 +1027,9 @@
                 infoTurn.textContent = prob.turn || '黑先';
                 answerValue = prob.answer;
                 answerProperty = prob.property;
-                loadSGF(prob.sgf);
+                boardElem.innerHTML = '<div class="loading">加载中...</div>';
+                const sgf = await loadSGFForProblem(prob);
+                if (sgf) loadSGF(sgf);
                 updateButtons();
                 updateProgress();
             }
@@ -1053,22 +1057,18 @@
                 
                 if (indexResp.ok) {
                     const list = await indexResp.json();
+                    const turnMap = { 'b': '黑先', 'w': '白先' };
                     for (const item of list) {
                         const num = item.num || item.file.replace('.sgf', '');
-                        const sgfResp = await fetch(`data/problems/${difficulty}/${item.file}`);
-                        if (sgfResp.ok) {
-                            const sgf = await sgfResp.text();
-                            const answerData = answers[num] || {};
-                            const turnMap = { 'b': '黑先', 'w': '白先' };
-                            problems.push({
-                                num: num,
-                                file: item.file,
-                                sgf: sgf,
-                                turn: turnMap[answerData.turn] || '黑先',
-                                answer: answerData.answer || null,
-                                property: answerData.property || 'sente'
-                            });
-                        }
+                        const answerData = answers[num] || {};
+                        problems.push({
+                            num: num,
+                            file: item.file,
+                            sgf: null,
+                            turn: turnMap[answerData.turn] || '黑先',
+                            answer: answerData.answer || null,
+                            property: answerData.property || 'sente'
+                        });
                     }
                 }
             } catch (e) {
@@ -1098,6 +1098,20 @@
                     progressFill.style.width = '0%';
                 }
             }
+        }
+
+        async function loadSGFForProblem(prob) {
+            if (prob.sgf) return prob.sgf;
+            try {
+                const resp = await fetch(`data/problems/${currentDifficulty}/${prob.file}`);
+                if (resp.ok) {
+                    prob.sgf = await resp.text();
+                    return prob.sgf;
+                }
+            } catch (e) {
+                console.error('Failed to load SGF:', e);
+            }
+            return null;
         }
 
         function shuffleArray(arr) {
