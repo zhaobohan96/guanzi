@@ -621,7 +621,7 @@
                 <button class="diff-btn" data-diff="intermediate">中级</button>
                 <button class="diff-btn" data-diff="advanced">高级</button>
             </div>
-        </div>
+            </div>
         </div>
     </header>
 
@@ -932,7 +932,6 @@
             boardElem.innerHTML = '';
             feedback.textContent = '';
             feedback.className = 'feedback';
-            answerInput.value = '';
 
             const sizeMatch = sgfContent.match(/SZ\[(\d+)\]/);
             const size = sizeMatch ? parseInt(sizeMatch[1]) : 19;
@@ -967,6 +966,7 @@
             syncBoard();
 
             const trCoords = parseSGFProperty(sgfContent, 'TR');
+            currentTRCoords = trCoords;
             trCoords.forEach(coord => {
                 var x = coord.charCodeAt(0) - 97;
                 var y = coord.charCodeAt(1) - 97;
@@ -1043,12 +1043,13 @@
             }
         }
 
-        async function loadProblem(index) {
+        async function loadProblem(index, clearInput = true) {
             const senteRadio = document.querySelector('input[name="endgameProperty"][value="sente"]');
             if (senteRadio) senteRadio.checked = true;
 
             feedback.textContent = '';
             feedback.className = 'feedback';
+            if (clearInput) answerInput.value = '';
             showAnswerBtn.textContent = '显示答案';
             answerShown = false;
 
@@ -1422,15 +1423,17 @@
         });
 
         let resizeTimer;
+        let currentTRCoords = [];
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
                 if (board) {
-                    if (currentMode === 'test' && testIndex >= 0) {
-                        loadProblem(testIndex);
-                    } else if (currentMode === 'free' && currentIndex >= 0) {
-                        loadProblem(currentIndex);
-                    }
+                    syncBoard();
+                    currentTRCoords.forEach(coord => {
+                        var x = coord.charCodeAt(0) - 97;
+                        var y = coord.charCodeAt(1) - 97;
+                        board.addObject({ x: x, y: y, type: 'TR', c: '#3a4a5c' });
+                    });
                 }
             }, 300);
         });
