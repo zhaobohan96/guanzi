@@ -85,6 +85,7 @@
 
         .diff-btn:hover { background: #f5f6f7; border-color: #b0b4b8; }
         .diff-btn.active { background: #3a4a5c; color: #fff; border-color: #3a4a5c; }
+        .diff-btn:disabled { opacity: 0.5; cursor: not-allowed; background: #f5f6f7; }
 
         .progress-bar {
             background: #fff;
@@ -565,7 +566,7 @@
                 <button class="mode-btn active" data-mode="free">自由练习</button>
                 <button class="mode-btn" data-mode="test">测试模式</button>
             </div>
-            <div class="difficulty-toggle">
+            <div id="difficultyToggle" class="difficulty-toggle">
                 <button class="diff-btn active" data-diff="beginner">初级</button>
                 <button class="diff-btn" data-diff="intermediate">中级</button>
                 <button class="diff-btn" data-diff="advanced">高级</button>
@@ -591,9 +592,9 @@
         </div>
 
         <div class="side">
-            <div class="panel">
+            <div id="navPanel" class="panel">
                 <div class="panel-title">导航</div>
-                <div class="nav-grid">
+                <div id="navGrid" class="nav-grid">
                     <button id="prevBtn" class="btn" disabled>上一题</button>
                     <button id="nextBtn" class="btn" disabled>下一题</button>
                     <button id="randomBtn" class="btn btn-dark btn-full">随机一题</button>
@@ -642,7 +643,7 @@
                 <div id="feedback" class="feedback"></div>
             </div>
 
-            <div class="panel">
+            <div id="opPanel" class="panel">
                 <div class="panel-title">操作</div>
                 <div class="op-row">
                     <button id="showAnswerBtn" class="btn btn-answer">显示答案</button>
@@ -653,19 +654,28 @@
 
     <div id="testStartPanel" class="test-start-panel" style="display:none;">
         <div class="panel" style="max-width:320px;margin:0 auto;">
-            <div class="panel-title">选择测试题目数量</div>
+            <div class="panel-title">选择测试难度</div>
+            <div class="test-diff-options">
+                <div class="test-option selected" data-diff="beginner">
+                    <div class="test-option-num">初级</div>
+                </div>
+                <div class="test-option" data-diff="intermediate">
+                    <div class="test-option-num">中级</div>
+                </div>
+                <div class="test-option" data-diff="advanced">
+                    <div class="test-option-num">高级</div>
+                </div>
+            </div>
+            <div class="panel-title" style="margin-top:16px;">选择测试题目数量</div>
             <div class="test-options">
                 <div class="test-option" data-count="10">
                     <div class="test-option-num">10 题</div>
-                    <div class="test-option-label">约2分钟</div>
                 </div>
                 <div class="test-option" data-count="20">
                     <div class="test-option-num">20 题</div>
-                    <div class="test-option-label">约4分钟</div>
                 </div>
                 <div class="test-option selected" data-count="30">
                     <div class="test-option-num">30 题</div>
-                    <div class="test-option-label">约6分钟</div>
                 </div>
             </div>
             <button id="startTestBtn" class="submit-btn">开始测试</button>
@@ -718,6 +728,7 @@
         let stats = JSON.parse(localStorage.getItem('guanzi_stats') || '{}');
 
         let testCount = 30;
+        let testDifficulty = 'beginner';
         let testProblems = [];
         let testIndex = -1;
         let testCorrect = 0;
@@ -741,6 +752,10 @@
         const submitBtn = document.getElementById('submitBtn');
         const feedback = document.getElementById('feedback');
         const showAnswerBtn = document.getElementById('showAnswerBtn');
+        const navPanel = document.getElementById('navPanel');
+        const navGrid = document.getElementById('navGrid');
+        const opPanel = document.getElementById('opPanel');
+        const difficultyToggle = document.getElementById('difficultyToggle');
         const diffBtns = document.querySelectorAll('.diff-btn');
         const modeBtns = document.querySelectorAll('.mode-btn');
         const testStartPanel = document.getElementById('testStartPanel');
@@ -1003,6 +1018,7 @@
             } else {
                 if (index < 0 || index >= problems.length) return;
                 currentIndex = index;
+                submitBtn.textContent = '提交答案';
                 const prob = problems[index];
                 infoNumber.textContent = prob.num;
                 infoDifficulty.textContent = difficultyMap[currentDifficulty];
@@ -1103,17 +1119,24 @@
                 progressRight.style.display = '';
                 testStartPanel.style.display = 'block';
                 document.querySelector('.page').style.display = 'none';
-                searchRow.style.display = 'none';
+                navPanel.style.display = 'none';
+                opPanel.style.display = 'none';
+                difficultyToggle.style.display = 'none';
             } else {
                 progressRight.style.display = 'none';
                 testStartPanel.style.display = 'none';
                 document.querySelector('.page').style.display = '';
-                searchRow.style.display = 'flex';
+                navPanel.style.display = '';
+                opPanel.style.display = '';
+                difficultyToggle.style.display = '';
                 if (problems.length > 0) loadProblem(0);
             }
         }
 
-        function startTest() {
+        async function startTest() {
+            currentDifficulty = testDifficulty;
+            await loadProblemList(testDifficulty);
+            
             const shuffled = shuffleArray(problems);
             testProblems = shuffled.slice(0, Math.min(testCount, shuffled.length));
             testIndex = -1;
@@ -1123,6 +1146,8 @@
 
             testStartPanel.style.display = 'none';
             document.querySelector('.page').style.display = '';
+            navPanel.style.display = 'none';
+            opPanel.style.display = 'none';
 
             if (testProblems.length > 0) {
                 loadProblem(0);
@@ -1185,18 +1210,23 @@
 
         diffBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                if (currentMode === 'test') {
-                    testStartPanel.style.display = 'none';
-                }
+                if (currentMode === 'test') return;
                 loadProblemList(btn.dataset.diff);
             });
         });
 
         testOptions.forEach(opt => {
             opt.addEventListener('click', () => {
-                testOptions.forEach(o => o.classList.remove('selected'));
-                opt.classList.add('selected');
-                testCount = parseInt(opt.dataset.count);
+                if (opt.dataset.count) {
+                    document.querySelectorAll('.test-option[data-count]').forEach(o => o.classList.remove('selected'));
+                    opt.classList.add('selected');
+                    testCount = parseInt(opt.dataset.count);
+                }
+                if (opt.dataset.diff) {
+                    document.querySelectorAll('.test-option[data-diff]').forEach(o => o.classList.remove('selected'));
+                    opt.classList.add('selected');
+                    testDifficulty = opt.dataset.diff;
+                }
             });
         });
 
