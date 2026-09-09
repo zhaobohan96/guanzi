@@ -1,253 +1,61 @@
 ﻿{
-    "1":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "2":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "3":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "4":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "5":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "6":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "7":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "8":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "9":  {
-              "answer":  null,
-              "property":  "sente"
-          },
-    "10":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "11":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "12":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "13":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "14":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "15":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "16":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "17":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "18":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "19":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "20":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "21":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "22":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "23":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "24":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "25":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "26":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "27":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "28":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "29":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "30":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "31":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "32":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "33":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "34":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "35":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "36":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "37":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "38":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "39":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "40":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "41":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "42":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "43":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "44":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "45":  {
-               "answer":  null,
-               "property":  "sente"
-           },
-    "46":  {
-               "property":  "gote",
-               "answer":  "10又1/3"
-           },
-    "47":  {
-               "property":  "gote",
-               "answer":  "9又1/2"
-           },
-    "48":  {
-               "property":  "gote",
-               "answer":  "6又1/3"
-           },
-    "49":  {
-               "property":  "gote",
-               "answer":  "7"
-           },
-    "50":  {
-               "property":  "gote",
-               "answer":  "11又5/6"
-           },
-    "51":  {
-               "property":  "gote",
-               "answer":  "9又1/6"
-           },
-    "52":  {
-               "property":  "gote",
-               "answer":  "11"
-           },
-    "53":  {
-               "property":  "gote",
-               "answer":  "18"
-           },
-    "54":  {
-               "property":  "gote",
-               "answer":  "18又11/12"
-           },
-    "55":  {
-               "property":  "gote",
-               "answer":  "14又5/6"
-           },
-    "56":  {
-               "property":  "gote",
-               "answer":  "9又2/3"
-           },
-    "57":  {
-               "turn":  "w",
-               "property":  "gote",
-               "answer":  "9"
-           },
-    "58":  {
-               "turn":  "w",
-               "property":  "sente",
-               "answer":  "7又2/3"
-           },
-    "59":  {
-               "property":  "gote",
-               "answer":  "5又2/3"
-           },
-    "60":  {
-               "turn":  "w",
-               "property":  "reverse",
-               "answer":  "2又1/12"
-           },
-    "61":  {
-               "property":  "gote",
-               "answer":  "5又7/12"
-           },
-    "62":  {
-               "property":  "gote",
-               "answer":  "8又3/4"
-           }
+    "1": {"answer":null,"property":"sente"},
+    "2": {"answer":null,"property":"sente"},
+    "3": {"answer":null,"property":"sente"},
+    "4": {"answer":null,"property":"sente"},
+    "5": {"answer":null,"property":"sente"},
+    "6": {"answer":null,"property":"sente"},
+    "7": {"answer":null,"property":"sente"},
+    "8": {"answer":null,"property":"sente"},
+    "9": {"answer":null,"property":"sente"},
+    "10": {"answer":null,"property":"sente"},
+    "11": {"answer":null,"property":"sente"},
+    "12": {"answer":null,"property":"sente"},
+    "13": {"answer":null,"property":"sente"},
+    "14": {"answer":null,"property":"sente"},
+    "15": {"answer":null,"property":"sente"},
+    "16": {"answer":null,"property":"sente"},
+    "17": {"answer":null,"property":"sente"},
+    "18": {"answer":null,"property":"sente"},
+    "19": {"answer":null,"property":"sente"},
+    "20": {"answer":null,"property":"sente"},
+    "21": {"answer":null,"property":"sente"},
+    "22": {"answer":null,"property":"sente"},
+    "23": {"answer":null,"property":"sente"},
+    "24": {"answer":null,"property":"sente"},
+    "25": {"answer":null,"property":"sente"},
+    "26": {"answer":null,"property":"sente"},
+    "27": {"answer":null,"property":"sente"},
+    "28": {"answer":null,"property":"sente"},
+    "29": {"answer":null,"property":"sente"},
+    "30": {"answer":null,"property":"sente"},
+    "31": {"answer":null,"property":"sente"},
+    "32": {"answer":null,"property":"sente"},
+    "33": {"answer":null,"property":"sente"},
+    "34": {"answer":null,"property":"sente"},
+    "35": {"answer":null,"property":"sente"},
+    "36": {"answer":null,"property":"sente"},
+    "37": {"answer":null,"property":"sente"},
+    "38": {"answer":null,"property":"sente"},
+    "39": {"answer":null,"property":"sente"},
+    "40": {"answer":null,"property":"sente"},
+    "41": {"answer":null,"property":"sente"},
+    "42": {"answer":null,"property":"sente"},
+    "43": {"property":"gote","answer":"10又1/3"},
+    "44": {"property":"gote","answer":"9又1/2"},
+    "45": {"property":"gote","answer":"6又1/3"},
+    "46": {"property":"gote","answer":"7"},
+    "47": {"property":"gote","answer":"11又5/6"},
+    "48": {"property":"gote","answer":"9又1/6"},
+    "49": {"property":"gote","answer":"11"},
+    "50": {"property":"gote","answer":"18"},
+    "51": {"property":"gote","answer":"18又11/12"},
+    "52": {"property":"gote","answer":"14又5/6"},
+    "53": {"property":"gote","answer":"9又2/3"},
+    "54": {"turn":"w","property":"gote","answer":"9"},
+    "55": {"turn":"w","property":"sente","answer":"7又2/3"},
+    "56": {"property":"gote","answer":"5又2/3"},
+    "57": {"turn":"w","property":"reverse","answer":"2又1/12"},
+    "58": {"property":"gote","answer":"5又7/12"},
+    "59": {"property":"gote","answer":"8又3/4"}
 }
