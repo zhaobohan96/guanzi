@@ -1,4 +1,5 @@
 ﻿[
+    {"num": "", "file": ".sgf"},
     {"num": "1", "file": "1.sgf"},
     {"num": "2", "file": "2.sgf"},
     {"num": "3", "file": "3.sgf"},
@@ -49,9 +50,5 @@
     {"num": "48", "file": "48.sgf"},
     {"num": "49", "file": "49.sgf"},
     {"num": "50", "file": "50.sgf"},
-    {"num": "51", "file": "51.sgf"},
-    {"num": "52", "file": "52.sgf"},
-    {"num": "53", "file": "53.sgf"},
-    {"num": "54", "file": "54.sgf"},
-    {"num": "55", "file": "55.sgf"}
+    {"num": "51", "file": "51.sgf"}
 ]
