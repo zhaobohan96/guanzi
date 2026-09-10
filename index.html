@@ -241,6 +241,8 @@
             transition: all 0.15s ease;
             background: #fff;
             color: #666;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
             text-align: center;
         }
 
@@ -313,21 +315,26 @@
             align-items: center;
             gap: 4px;
             cursor: pointer;
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 13px;
+            color: #666;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
-        .property-option input[type="radio"] {
-            margin: 0;
-            cursor: pointer;
-        }
-
-        .property-option input[type="radio"]:checked + .property-text {
+        .property-option.active {
             color: #3a4a5c;
             font-weight: 500;
+            border-color: #3a4a5c;
+            background: #eef0f2;
         }
 
         .property-text {
             font-size: 13px;
-            color: #666;
         }
 
         .submit-btn {
@@ -341,6 +348,8 @@
             color: #fff;
             cursor: pointer;
             transition: all 0.15s ease;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
         .submit-btn:hover { background: #4a5a6c; border-color: #4a5a6c; }
 
@@ -673,17 +682,14 @@
                     </div>
                     <div class="property-group">
                         <span class="property-label">性质:</span>
-                        <div class="property-options">
-                            <div class="property-option" data-value="sente">
-                                <input type="radio" name="endgameProperty" value="sente" checked tabindex="-1">
+                        <div class="property-options" id="propertyOptions">
+                            <div class="property-option active" data-value="sente">
                                 <span class="property-text">先手</span>
                             </div>
                             <div class="property-option" data-value="gote">
-                                <input type="radio" name="endgameProperty" value="gote" tabindex="-1">
                                 <span class="property-text">后手</span>
                             </div>
                             <div class="property-option" data-value="reverse">
-                                <input type="radio" name="endgameProperty" value="reverse" tabindex="-1">
                                 <span class="property-text">逆收</span>
                             </div>
                         </div>
@@ -776,6 +782,7 @@
         let answerValue = null;
         let answerProperty = null;
         let answerShown = false;
+        let selectedProperty = 'sente';
         let stats = JSON.parse(localStorage.getItem('guanzi_stats') || '{}');
 
         let testCount = 30;
@@ -1045,8 +1052,10 @@
         }
 
         async function loadProblem(index, clearInput = true) {
-            const senteRadio = document.querySelector('input[name="endgameProperty"][value="sente"]');
-            if (senteRadio) senteRadio.checked = true;
+            selectedProperty = 'sente';
+            document.querySelectorAll('.property-option').forEach(el => {
+                el.classList.toggle('active', el.dataset.value === 'sente');
+            });
 
             feedback.textContent = '';
             feedback.className = 'feedback';
@@ -1348,7 +1357,6 @@
             }
 
             const propertyMap = { 'sente': '先手', 'gote': '后手', 'reverse': '逆收' };
-            const selectedProperty = document.querySelector('input[name="endgameProperty"]:checked').value;
             const propertyText = propertyMap[selectedProperty];
 
             if (answerValue === null) {
@@ -1398,14 +1406,19 @@
             option.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                const radio = option.querySelector('input[type="radio"]');
-                if (radio) radio.checked = true;
+                selectedProperty = option.dataset.value;
+                document.querySelectorAll('.property-option').forEach(el => el.classList.remove('active'));
+                option.classList.add('active');
             });
         });
 
         answerInput.addEventListener('keydown', e => { if (e.key === 'Enter') submitBtn.click(); });
 
+        let showAnswerLock = false;
         showAnswerBtn.addEventListener('click', () => {
+            if (showAnswerLock) return;
+            showAnswerLock = true;
+            setTimeout(() => { showAnswerLock = false; }, 300);
             if (answerShown) {
                 feedback.textContent = '';
                 feedback.className = 'feedback';
