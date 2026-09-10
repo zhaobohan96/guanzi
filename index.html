@@ -674,18 +674,18 @@
                     <div class="property-group">
                         <span class="property-label">性质:</span>
                         <div class="property-options">
-                            <label class="property-option">
-                                <input type="radio" name="endgameProperty" value="sente" checked>
+                            <div class="property-option" data-value="sente">
+                                <input type="radio" name="endgameProperty" value="sente" checked tabindex="-1">
                                 <span class="property-text">先手</span>
-                            </label>
-                            <label class="property-option">
-                                <input type="radio" name="endgameProperty" value="gote">
+                            </div>
+                            <div class="property-option" data-value="gote">
+                                <input type="radio" name="endgameProperty" value="gote" tabindex="-1">
                                 <span class="property-text">后手</span>
-                            </label>
-                            <label class="property-option">
-                                <input type="radio" name="endgameProperty" value="reverse">
+                            </div>
+                            <div class="property-option" data-value="reverse">
+                                <input type="radio" name="endgameProperty" value="reverse" tabindex="-1">
                                 <span class="property-text">逆收</span>
-                            </label>
+                            </div>
                         </div>
                     </div>
                     <button id="submitBtn" class="submit-btn">提交答案</button>
@@ -1394,14 +1394,13 @@
             }
         });
 
-        // Fix mobile: prevent label click from stealing focus from answerInput
-        document.querySelectorAll('.property-option').forEach(label => {
-            label.addEventListener('mousedown', e => e.preventDefault());
-            label.addEventListener('touchstart', e => {
+        document.querySelectorAll('.property-option').forEach(option => {
+            option.addEventListener('click', (e) => {
                 e.preventDefault();
-                const radio = label.querySelector('input[type="radio"]');
+                e.stopPropagation();
+                const radio = option.querySelector('input[type="radio"]');
                 if (radio) radio.checked = true;
-            }, { passive: false });
+            });
         });
 
         answerInput.addEventListener('keydown', e => { if (e.key === 'Enter') submitBtn.click(); });
