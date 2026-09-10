@@ -964,6 +964,7 @@
 
             board.addCustomObject(coordinates);
             syncBoard();
+            lastBoardWidth = boardElem.parentElement.clientWidth;
 
             const trCoords = parseSGFProperty(sgfContent, 'TR');
             currentTRCoords = trCoords;
@@ -1393,6 +1394,16 @@
             }
         });
 
+        // Fix mobile: prevent label click from stealing focus from answerInput
+        document.querySelectorAll('.property-option').forEach(label => {
+            label.addEventListener('mousedown', e => e.preventDefault());
+            label.addEventListener('touchstart', e => {
+                e.preventDefault();
+                const radio = label.querySelector('input[type="radio"]');
+                if (radio) radio.checked = true;
+            }, { passive: false });
+        });
+
         answerInput.addEventListener('keydown', e => { if (e.key === 'Enter') submitBtn.click(); });
 
         showAnswerBtn.addEventListener('click', () => {
@@ -1424,10 +1435,14 @@
 
         let resizeTimer;
         let currentTRCoords = [];
+        let lastBoardWidth = 0;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(() => {
                 if (board) {
+                    const newWidth = boardElem.parentElement.clientWidth;
+                    if (Math.abs(newWidth - lastBoardWidth) < 5) return;
+                    lastBoardWidth = newWidth;
                     syncBoard();
                     currentTRCoords.forEach(coord => {
                         var x = coord.charCodeAt(0) - 97;
